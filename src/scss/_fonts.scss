@@ -1,0 +1,32 @@
+@font-face {
+  font-weight: 400;
+  font-family: "CeraPro-Regular";
+  font-style: normal;
+  src:
+    local("CeraPro-Regular"),
+    url("../fonts/CeraPro-Regular.woff2") format("woff2"),
+    url("../fonts/CeraPro-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "CeraPro-Medium";
+  font-style: normal;
+  src:
+    local("CeraPro-Medium"),
+    url("../fonts/CeraPro-Medium.woff2") format("woff2"),
+    url("../fonts/CeraPro-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "CeraPro-Bold";
+  font-style: normal;
+  src:
+    local("CeraPro-Bold"),
+    url("../fonts/CeraPro-Bold.woff2") format("woff2"),
+    url("../fonts/CeraPro-Bold.woff") format("woff");
+  font-display: swap;
+}
