@@ -2,19 +2,38 @@
 <html lang="ru">
 
 @@include('html/head.html', {
-"title": 'Головна',
+"title": 'Главная',
 "style": 'style.min.css'
 })
 
 <body>
-  @@include('html/header.html', {})
-  <main>
-    <div class="container __container">
-      1212
+  <div class="site-container js-wrapper">
+    @@include('html/header.html', {})
+    <main class="main">
+      <div class="container">
+        1212
+      </div>
+    </main>
+    <div class="search-popup js-popup">
+      <button class="search-popup__close js-popup-close">
+        <svg class="search-popup__icclose">
+          <use xlink:href="@img/icons/mono/spriteMono.svg#close"></use>
+        </svg>
+      </button>
+      <a class="search-popup__logo logo" href="#">
+        <img class="logo__img" width="135px" height="30px" src="@img/logo.png" alt="logo">
+      </a>
+      <form class="search-popup__form" action="#">
+        <input class="search-popup__input js-searchinput" type="search" placeholder="Поиск по сайту">
+        <button class="search-popup__btn" type="submit">
+          <svg class="search-popup__icon">
+            <use xlink:href="@img/icons/mono/spriteMono.svg#search"></use>
+          </svg>
+        </button>
+      </form>
     </div>
-  </main>
-  @@include('html/footer.html', {})
-
+    @@include('html/footer.html', {})
+  </div>
   <script src="js/main.min.js"></script>
 </body>
 
