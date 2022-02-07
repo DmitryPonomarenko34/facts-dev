@@ -48,7 +48,7 @@
   }
 
   &__list-link {
-    @extend .header__lang-link;
+    font-size: 18px;
   }
 
   &__lang {
@@ -128,7 +128,7 @@
   }
 
   &__link {
-    @extend .header__lang-link;
+    font-size: 18px;
   }
 }
 

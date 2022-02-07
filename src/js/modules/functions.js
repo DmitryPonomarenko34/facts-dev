@@ -29,62 +29,6 @@ export function global() {
 
   menuBox.style.paddingTop = String(headerHeight + 'px');;
 
-  if (window.screen.width <= 992) {
-    let adaptiveMenu = document.querySelector('.js-header__list');
-    let listItem = document.createElement('li');
-    let menuList = document.querySelector('.js-menulist');
-    let headerListItem = document.querySelectorAll('.js-header__list li.header__list-item');
-    let headerListLink = document.querySelectorAll('.js-header__list a.header__list-link');
-
-    for (let i = 0; i < headerListItem.length; i++) {
-      headerListItem[i].classList.remove('header__list-item');
-      headerListItem[i].classList.add('submenu__item');
-    }
-
-    for (let i = 0; i < headerListLink.length; i++) {
-      headerListLink[i].classList.remove('header__list-link');
-      headerListLink[i].classList.add('submenu__link');
-    }
-
-    listItem.className = 'menu__list-item js-listitem';
-    listItem.innerHTML = '<span class="menu__list-caption">Важные</span>';
-
-    adaptiveMenu.classList.remove('header__list');
-    adaptiveMenu.classList.add('submenu');
-
-
-    menuList.append(listItem);
-    document.querySelector('.js-listitem').append(adaptiveMenu);
-
-    let siteContainer = document.querySelector('.js-wrapper');
-
-    if (burgerBtn) {
-      burgerBtn.addEventListener('click', function () {
-        siteContainer.classList.toggle('site-container--lock')
-      })
-    }
-
-    let body = document.querySelector('body');
-
-    body.addEventListener('click', function (e) {
-      if (!e.target.classList.contains('js-menulist') && !e.target.classList.contains('js-burger')) {
-        burgerBtn.classList.remove('burger--active');
-        siteContainer.classList.remove('site-container--lock');
-        if (burgerBtn.nextElementSibling.classList.contains('js-menubox')) {
-          burgerBtn.nextElementSibling.classList.remove('menu__box--open');
-        }
-      }
-
-      if (!e.target.classList.contains('js-menulist') && !e.target.classList.contains('js-burger')) {
-        burgerBtn.classList.remove('burger--active');
-        siteContainer.classList.remove('site-container--lock');
-        if (burgerBtn.nextElementSibling.classList.contains('js-menubox')) {
-          burgerBtn.nextElementSibling.classList.remove('menu__box--open');
-        }
-      }
-    })
-  }
-
   let headerPopup = document.querySelector('.js-popup');
   let headerPopupClose = document.querySelector('.js-popup-close');
   let searchPopupLink = document.querySelector('.js-search-link');
@@ -96,4 +40,114 @@ export function global() {
   searchPopupLink.addEventListener('click', function () {
     headerPopup.classList.add('search-popup--active');
   })
+
+
+  let minResize = false;
+  let maxResize = false;
+
+  var f_windowWidth = function (w) {
+
+    if (w <= n && !minResize) {
+      minResize = true;
+      maxResize = false;
+      let adaptiveMenu = document.querySelector('.js-header__list');
+      let listItem = document.createElement('li');
+      let menuList = document.querySelector('.js-menulist');
+      let headerListItem = document.querySelectorAll('.js-header__list li.header__list-item');
+      let headerListLink = document.querySelectorAll('.js-header__list a.header__list-link');
+
+      for (let i = 0; i < headerListItem.length; i++) {
+        headerListItem[i].classList.remove('header__list-item');
+        headerListItem[i].classList.add('submenu__item');
+      }
+
+      for (let i = 0; i < headerListLink.length; i++) {
+        headerListLink[i].classList.remove('header__list-link');
+        headerListLink[i].classList.add('submenu__link');
+      }
+
+      listItem.className = 'menu__list-item js-listitem';
+      listItem.innerHTML = '<span class="menu__list-caption">Важные</span>';
+
+      adaptiveMenu.classList.remove('header__list');
+      adaptiveMenu.classList.add('submenu');
+
+
+      menuList.append(listItem);
+      document.querySelector('.js-listitem').append(adaptiveMenu);
+
+      let siteContainer = document.querySelector('.js-wrapper');
+
+      if (burgerBtn) {
+        burgerBtn.addEventListener('click', function () {
+          siteContainer.classList.toggle('site-container--lock')
+        })
+      }
+
+      let body = document.querySelector('body');
+
+      body.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('js-menulist') && !e.target.classList.contains('js-burger')) {
+          burgerBtn.classList.remove('burger--active');
+          siteContainer.classList.remove('site-container--lock');
+          if (burgerBtn.nextElementSibling.classList.contains('js-menubox')) {
+            burgerBtn.nextElementSibling.classList.remove('menu__box--open');
+          }
+        }
+
+        if (!e.target.classList.contains('js-menulist') && !e.target.classList.contains('js-burger')) {
+          burgerBtn.classList.remove('burger--active');
+          siteContainer.classList.remove('site-container--lock');
+          if (burgerBtn.nextElementSibling.classList.contains('js-menubox')) {
+            burgerBtn.nextElementSibling.classList.remove('menu__box--open');
+          }
+        }
+      })
+      console.log("Window width <= " + n);
+    }
+
+    if (w >= n && !maxResize) {
+      maxResize = true;
+      minResize = false;
+
+      let headerListItem = document.querySelectorAll('.js-header__list li.submenu__item');
+      let headerListLink = document.querySelectorAll('.js-header__list a.submenu__link');
+      let listItemMenu = document.querySelector('.js-listitem');
+      let adaptiveMenu = document.querySelector('.js-header__list');
+
+      for (let i = 0; i < headerListItem.length; i++) {
+        headerListItem[i].classList.remove('submenu__item');
+        headerListItem[i].classList.add('header__list-item');
+      }
+
+      for (let i = 0; i < headerListLink.length; i++) {
+        headerListLink[i].classList.remove('submenu__link');
+        headerListLink[i].classList.add('header__list-link');
+      }
+
+      adaptiveMenu.classList.remove('submenu');
+      adaptiveMenu.classList.add('header__list');
+
+
+      let headerLogo = document.querySelector('.header__logo');
+
+      headerLogo.insertAdjacentElement('afterend', adaptiveMenu)
+
+      if (listItemMenu) {
+        listItemMenu.remove();
+      }
+
+      console.log("Window width > " + n);
+    }
+  };
+
+  let n = 992,
+    w = window.innerWidth;
+
+  f_windowWidth(w);
+
+  window.addEventListener('resize', function () {
+    let w = window.innerWidth;
+    f_windowWidth(w);
+  });
 }
