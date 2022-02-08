@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  z-index: 2;
   border-bottom: 1px solid var(--bg-color);
   filter: drop-shadow(0 0 46px rgba(0, 0, 0, 0.1));
 
@@ -72,6 +73,10 @@
   &__lang-link--current {
     color: var(--accent-color);
   }
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .menu {

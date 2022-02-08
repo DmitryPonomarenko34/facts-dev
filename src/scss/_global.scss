@@ -29,6 +29,7 @@ p {
 
   &::before {
     position: absolute;
+    display: none;
     content: '';
     top: 0;
     left: 0;
@@ -38,6 +39,7 @@ p {
     opacity: 0;
     visibility: hidden;
     transition: ease 0.3s opacity;
+    z-index: 1;
   }
 
   &--lock {
