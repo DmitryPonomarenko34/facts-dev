@@ -110,6 +110,10 @@ p {
 
 .logo {
   display: block;
+
+  &__img {
+    height: 100%;
+  }
 }
 
 .search-popup {
@@ -187,4 +191,14 @@ p {
     opacity: 1;
     transition: ease 0.3s opacity;
   }
+}
+
+.info-text {
+  display: inline-block;
+  @extend %cerapro-bold;
+  padding: 3px 21px;
+  color: var(--default-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: var(--second-color);
 }

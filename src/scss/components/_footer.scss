@@ -7,8 +7,6 @@
     margin-bottom: 31px;
   }
 
-  &__inner {}
-
   &__content {
     position: relative;
     display: flex;
@@ -17,13 +15,13 @@
     padding-bottom: 17px;
 
     &::before {
-      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 1px;
       background-color: rgba(#000, 0.1);
+      content: "";
     }
   }
 
@@ -65,18 +63,15 @@
     }
   }
 
-  &__content-box {}
-
   &__content-text {
     max-width: 213px;
     margin: 1px 0 23px;
     font-size: 18px;
     line-height: 20px;
     opacity: 1;
+
     @extend %cerapro-medium;
   }
-
-  &__content-link {}
 
   &__info {
     display: flex;
@@ -85,9 +80,9 @@
 
   &__info-item {
     display: flex;
-    min-height: 100%;
     flex-direction: column;
     width: 49%;
+    min-height: 100%;
     margin-right: 40px;
 
     &:last-child {
@@ -106,8 +101,7 @@
 
   &__link {
     color: var(--default-color);
+
     @extend %cerapro-medium;
   }
 }
-
-.container {}

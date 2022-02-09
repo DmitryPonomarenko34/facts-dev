@@ -1,8 +1,166 @@
 @import "vars";
 @import "fonts";
 @import "reset";
-@import "libs";
+@import "../../node_modules/swiper/swiper-bundle.css";
 @import "global";
 @import "components/header";
 @import "components/footer";
+
+.gallery {
+  padding-top: 17px;
+
+  &__thumb-swiper {
+    margin-bottom: 25px;
+  }
+
+  &__thumb-slide {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      z-index: 2;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(var(--default-rgba), 0.5);
+      content: "";
+    }
+  }
+
+  &__thumb-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    &--top {
+      object-position: 100% 22%;
+    }
+  }
+
+  &__thumb-text {
+    position: relative;
+    z-index: 3;
+    max-width: 267px;
+    color: var(--second-color);
+    font-size: 16px;
+    line-height: 18px;
+
+    @extend %cerapro-bold;
+
+    &--min {
+      max-width: 150px;
+    }
+  }
+
+  &__for-swiper {}
+
+  &__for-slide {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 15px 153px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &__for-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 74%;
+      height: 100%;
+      background: linear-gradient(76.81deg, #000 14.51%, rgba(0, 0, 0, 0%) 74.23%);
+    }
+  }
+
+  &__for-img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: 0 20%;
+  }
+
+  &__for-category {
+    margin-bottom: 17px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__for-title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    max-width: 608px;
+    color: var(--second-color);
+    font-size: 36px;
+    line-height: 40px;
+
+    @extend %cerapro-bold;
+  }
+
+  &__for-text {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    max-width: 540px;
+    line-height: 24px;
+    opacity: 1;
+    color: var(--second-color);
+  }
+
+  .swiper-slide-thumb-active {
+
+    &::before,
+    &::after {
+      @keyframes animbefore {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      animation: animbefore 5s ease;
+    }
+  }
+}
+
+.object-fit--none {
+  object-fit: none;
+}
+
 @import "media";

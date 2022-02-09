@@ -91,7 +91,6 @@ export function global() {
           }
         }
       })
-      console.log("Window width <= " + n);
     }
 
     if (w >= n && !maxResize) {
@@ -103,7 +102,6 @@ export function global() {
       if (siteContainer.classList.contains('site-container--lock')) {
         siteContainer.classList.remove('site-container--lock');
       }
-      console.log("Window width > " + n);
     }
   };
 
