@@ -1,0 +1,48 @@
+@@if (article === 'article') {
+<article class="article @@dopClass">
+  <a class="article__box" href="@@href">
+    <img class="article__box-img" src="@@imgSrc" alt="@@alt">
+    <span class="article__box-info info-black">
+      @@info-text
+    </span>
+  </a>
+  <a class="article__text-link article-text" href="#">
+    @@link-text
+  </a>
+  <time class="article__time article-time" datetime="@@datatime">@@time</time>
+</article>
+}
+
+@@if (article === 'article-long') {
+<article class="article-long @@dopClass">
+  <img class="article-long__img" src="@@imgSrc" alt="@@alt">
+  <div class="article-long__box">
+    <span class="article-long__info info-text">
+      @@info-text
+    </span>
+  </div>
+  <span class="article-long__num">
+    @@nums
+  </span>
+  <a class="article-long__link article-text" href="@@href">
+    @@text
+  </a>
+</article>
+}
+
+@@if (article === 'article-primary') {
+<article class="article-primary @@dopClass">
+  <a class="article-primary__link" href="@@href">
+    <img class="article-primary__img" src="@@imgSrc" alt="@@alt">
+  </a>
+  <div class="article-primary__box">
+    <span class="article-primary__info info-text">
+      @@info-text
+    </span>
+  </div>
+  <p class="article-primary__text article-text">
+    @@text
+  </p>
+  <time class="article-primary__time article-time" datetime="@@datatime">@@time</time>
+</article>
+}

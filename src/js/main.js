@@ -15,6 +15,7 @@ window.onload = function () {
     fadeEffect: {
       crossFade: true
     },
+    autoHeight: true,
     virtualTranslate: true,
     // autoplay: {
     //   delay: 5000,

@@ -7,7 +7,7 @@
 @import "components/footer";
 
 .gallery {
-  padding-top: 17px;
+  padding: 17px 0;
 
   &__thumb-swiper {
     margin-bottom: 25px;
@@ -159,8 +159,24 @@
   }
 }
 
-.object-fit--none {
-  object-fit: none;
+.articles {
+  padding: 24px 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 23.333%;
+    max-width: none;
+    margin-right: 27px;
+    margin-bottom: 30px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }
 
 @import "media";

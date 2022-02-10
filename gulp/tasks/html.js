@@ -10,7 +10,10 @@ export const html = () => {
       message: "Error <%= error.message %>"
     })
   ))
-    .pipe(fileinclude())
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
     .pipe(webphtmlNosvg())
     .pipe(versionNumber({
