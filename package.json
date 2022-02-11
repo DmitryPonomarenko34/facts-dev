@@ -36,6 +36,7 @@
     "gulp-webp-html-nosvg": "^1.0.5",
     "gulp-webpcss": "^1.1.1",
     "sass": "^1.49.7",
+    "simplebar": "^5.3.6",
     "stylelint": "^14.3.0",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^24.0.0",

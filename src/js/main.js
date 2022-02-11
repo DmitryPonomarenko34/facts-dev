@@ -1,5 +1,6 @@
-import * as functions from './modules/functions.js';
 import Swiper from 'swiper/bundle';
+import 'simplebar';
+import * as functions from './modules/functions.js';
 
 window.onload = function () {
   functions.global();

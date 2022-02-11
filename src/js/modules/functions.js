@@ -27,7 +27,7 @@ export function global() {
   let headerHeight = header.clientHeight;
   let menuBox = document.querySelector('.js-menubox');
 
-  menuBox.style.paddingTop = String(headerHeight + 'px');;
+  menuBox.style.paddingTop = String(headerHeight + 'px');
 
   let headerPopupClose = document.querySelector('.js-popup-close');
   let searchPopupLink = document.querySelector('.js-search-link');

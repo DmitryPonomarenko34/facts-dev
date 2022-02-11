@@ -32,17 +32,15 @@
 
 @@if (article === 'article-primary') {
 <article class="article-primary @@dopClass">
-  <a class="article-primary__link" href="@@href">
-    <img class="article-primary__img" src="@@imgSrc" alt="@@alt">
-  </a>
+  <img class="article-primary__img" src="@@imgSrc" alt="@@alt">
   <div class="article-primary__box">
     <span class="article-primary__info info-text">
       @@info-text
     </span>
   </div>
-  <p class="article-primary__text article-text">
+  <a class="article-primary__link article-text" href="@@href">
     @@text
-  </p>
+  </a>
   <time class="article-primary__time article-time" datetime="@@datatime">@@time</time>
 </article>
 }
