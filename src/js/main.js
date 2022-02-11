@@ -18,11 +18,12 @@ window.onload = function () {
     },
     autoHeight: true,
     virtualTranslate: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: true,
-    // },
-    speed: 1300,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+      stopOnLastSlide: true
+    },
+    speed: 1000,
     slidersPerView: 1,
     thumbs: {
       swiper: swiperThumb,

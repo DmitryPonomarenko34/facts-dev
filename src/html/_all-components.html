@@ -1,7 +1,7 @@
 @@if (article === 'article') {
 <article class="article @@dopClass">
   <a class="article__box" href="@@href">
-    <img class="article__box-img" src="@@imgSrc" alt="@@alt">
+    <img class="article__box-img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
     <span class="article__box-info info-black">
       @@info-text
     </span>
@@ -15,7 +15,7 @@
 
 @@if (article === 'article-long') {
 <article class="article-long @@dopClass">
-  <img class="article-long__img" src="@@imgSrc" alt="@@alt">
+  <img class="article-long__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
   <div class="article-long__box">
     <span class="article-long__info info-text">
       @@info-text
@@ -32,7 +32,7 @@
 
 @@if (article === 'article-primary') {
 <article class="article-primary @@dopClass">
-  <img class="article-primary__img" src="@@imgSrc" alt="@@alt">
+  <img class="article-primary__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
   <div class="article-primary__box">
     <span class="article-primary__info info-text">
       @@info-text
@@ -42,5 +42,64 @@
     @@text
   </a>
   <time class="article-primary__time article-time" datetime="@@datatime">@@time</time>
+</article>
+}
+
+@@if (article === 'article-pers') {
+<article class="article-pers @@dopClass">
+  <img class="article-pers__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
+  <div class="article-pers__content">
+    <a class="article-pers__title" href="@@title-href">
+      @@title
+    </a>
+    <p class="article-pers__text">
+      @@text
+    </p>
+  </div>
+  <div class="article-pers__info">
+    <a class="article-pers__author" href="@@author-href">
+      @@author
+    </a>
+    <p class="article-pers__pos">
+      @@position
+    </p>
+  </div>
+</article>
+}
+
+@@if (article === 'article-quotes') {
+<article class="article-quotes @@dopClass">
+  <a class="article-quotes__link" href="@@href"></a>
+  <span class="article-quotes__cap info-black">
+    @@info-text
+  </span>
+  <blockquote class="article-quotes__text">
+    @@quotes-text
+  </blockquote>
+  <div class="article-quotes__info">
+    <a class="article-quotes__author-link" href="@@authorHref">
+      <img class="article-quotes__author" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
+    </a>
+    <span class="article-quotes__name">
+      @@author
+    </span>
+  </div>
+</article>
+}
+
+@@if (article === 'article-text') {
+<article class="article-caption @@dopClass">
+  <div class="article-caption__box">
+    <span class="article-caption__cap info-black">
+      @@info-text
+    </span>
+  </div>
+  <a class="article-caption__link article-title" href="@@titleHref">
+    @@titleText
+  </a>
+  <p class="article-caption__text">
+    @@text
+  </p>
+  <time class="article-caption__time article-time" datetime="@@datatime">@@time</time>
 </article>
 }
