@@ -159,3 +159,19 @@
   </div>
 </article>
 }
+
+@@if (article === 'article-photo') {
+<article class="article-photo @@dopClass">
+  <div class="article-photo__box">
+    <span class="article-photo__cap info-text">
+      @@info-text
+    </span>
+  </div>
+  <a class="article-photo__link" href="@@href">
+    <img class="article-photo__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
+  </a>
+  <div class="article-photo__title article-title--second">
+    @@title
+  </div>
+</article>
+}

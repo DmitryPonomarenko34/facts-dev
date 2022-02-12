@@ -364,4 +364,24 @@
   }
 }
 
+.country {
+  padding: 50px 0;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 26px;
+  }
+
+  &__item {
+    &--fluid {
+      grid-column-start: span 2;
+    }
+  }
+}
+
 @import "media";
