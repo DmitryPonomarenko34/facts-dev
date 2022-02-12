@@ -103,3 +103,59 @@
   <time class="article-caption__time article-time" datetime="@@datatime">@@time</time>
 </article>
 }
+
+@@if (article === 'article-rating') {
+<article class="article-rating @@dopClass">
+  <div class="article-rating__box">
+    <span class="article-rating__cap info-black">
+      @@info-text
+    </span>
+  </div>
+  <a class="article-rating__link" href="@@href">
+    <img class="article-rating__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
+  </a>
+  <span class="article-rating__num article-num">
+    @@num
+  </span>
+  <div class="article-rating__title article-title--second">
+    <span class="article-rating__title--accent">
+      @@subTitle
+    </span>
+    @@title
+  </div>
+</article>
+}
+
+@@if (article === 'article-white') {
+<article class="article-white @@dopClass">
+  <div class="article-white__box">
+    <span class="article-white__cap info-text">
+      @@info-text
+    </span>
+  </div>
+  <div class="article-white__imgbox">
+    <img class="article-white__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
+  </div>
+  <a class="article-white__link" href="@@href"></a>
+  <div class="article-white__title article-title--second">
+    @@title
+  </div>
+</article>
+}
+
+@@if (article === 'article-black') {
+<article class="article-black @@dopClass">
+  <div class="article-black__box">
+    <span class="article-black__cap info-black">
+      @@info-text
+    </span>
+  </div>
+  <a class="article-black__link" href="@@href"></a>
+  <span class="article-black__num article-num">
+    @@num
+  </span>
+  <div class="article-black__title article-title--second">
+    @@title
+  </div>
+</article>
+}

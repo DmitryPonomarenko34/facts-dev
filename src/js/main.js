@@ -18,15 +18,30 @@ window.onload = function () {
     },
     autoHeight: true,
     virtualTranslate: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-      stopOnLastSlide: true
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: true,
+    //   stopOnLastSlide: true
+    // },
     speed: 1000,
     slidersPerView: 1,
     thumbs: {
       swiper: swiperThumb,
+    },
+  });
+
+
+  const ratingSwiper = new Swiper(".rating__swiper", {
+    simulateTouch: true,
+    spaceBetween: 24,
+    slidesPerView: 3,
+    slidesPerGroup: 1,
+    slidesPerGroupSkip: 0,
+    autoHeight: false,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 }
