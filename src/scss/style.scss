@@ -440,7 +440,7 @@
 }
 
 .beautiful {
-  padding: 47px 0 20px;
+  padding: 47px 0 51px;
   background-color: var(--second-color);
 
   &__title {
@@ -465,6 +465,95 @@
     &.article-long {
       padding: 20px 9px 20px 19px;
     }
+  }
+}
+
+.slider-sec {
+  &__swiper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 57%;
+      color: var(--second-color);
+
+      &::after {
+        font-size: 50px;
+      }
+    }
+
+    .swiper-button-next {
+      right: 36px;
+    }
+
+    .swiper-button-prev {
+      left: 36px;
+    }
+  }
+
+  &__wrapper {}
+
+  &__slide {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 209px 0 104px;
+    text-align: center;
+  }
+
+  &__info {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+  }
+
+  &__link {
+    &::before {
+      content: '';
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+    }
+  }
+
+  &__link,
+  &__link::before,
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {}
+
+  &__title,
+  &__text {
+    display: block;
+    position: relative;
+    z-index: 2;
+    max-width: 572px;
+    margin: 0 auto;
+    pointer-events: none;
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    color: var(--second-color);
+    font-size: 54px;
+    line-height: 40px;
+    @extend %cerapro-bold;
+  }
+
+  &__text {
+    color: var(--second-color);
+    font-size: 24px;
+    line-height: 24px;
+    opacity: 1;
+    @extend %cerapro-medium;
   }
 }
 

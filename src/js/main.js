@@ -58,4 +58,15 @@ window.onload = function () {
       prevEl: '.swiper-button-prev',
     },
   });
+
+   const sliderSec = new Swiper(".slider-sec__swiper", {
+    simulateTouch: true,
+    slidesPerView: 1,
+    autoHeight: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 }
