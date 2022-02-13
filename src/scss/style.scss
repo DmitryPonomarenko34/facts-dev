@@ -177,6 +177,10 @@
     &:nth-child(4n) {
       margin-right: 0;
     }
+
+    .article-primary__link {
+      font-size: 22px;
+    }
   }
 }
 
@@ -365,7 +369,7 @@
 }
 
 .country {
-  padding: 50px 0;
+  padding: 50px 0 54px;
 
   &__title {
     margin-bottom: 26px;
@@ -381,6 +385,57 @@
     &--fluid {
       grid-column-start: span 2;
     }
+  }
+}
+
+.popular {
+  padding: 48px 0 52px;
+  background-color: var(--bg-color);
+
+  &__title {
+    margin-bottom: 34px;
+  }
+
+  &__inner {
+    max-width: 1500px;
+    display: flex;
+    min-width: 0;
+    height: 293px;
+    padding: 0;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      min-width: 60px;
+      height: 100%;
+      margin-top: 0;
+      color: var(--default-color);
+      font-size: 55px;
+      background-color: var(--second-color);
+    }
+
+    .swiper-button-next {
+      margin-left: 24px;
+    }
+
+    .swiper-button-prev {
+      margin-right: 24px;
+    }
+  }
+
+  &__swiper {
+    display: flex;
+    min-width: 0;
+  }
+
+  &__swiper-wrapper {
+    box-sizing: border-box;
+  }
+
+  &__item {
+    max-width: none;
+    height: 100%;
+    min-height: 0;
   }
 }
 

@@ -44,4 +44,18 @@ window.onload = function () {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  const popularSwiper = new Swiper(".popular__swiper", {
+    simulateTouch: true,
+    spaceBetween: 24,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    slidesPerGroupSkip: 0,
+    autoHeight: false,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 }

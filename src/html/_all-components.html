@@ -45,6 +45,34 @@
 </article>
 }
 
+@@if (article === 'article-primary--white') {
+  <article class="article-primary article-primary--white @@dopClass">
+    <div class="article-primary__box">
+      <span class="article-primary__info info-black">
+        @@info-text
+      </span>
+    </div>
+    <a class="article-primary__link article-text" href="@@href">
+      @@text
+    </a>
+    <time class="article-primary__time article-time" datetime="@@datatime">@@time</time>
+  </article>
+}
+
+@@if (article === 'article-primary--black') {
+  <article class="article-primary article-primary--black @@dopClass">
+    <div class="article-primary__box">
+      <span class="article-primary__info info-text">
+        @@info-text
+      </span>
+    </div>
+    <a class="article-primary__link article-text" href="@@href">
+      @@text
+    </a>
+    <time class="article-primary__time article-time" datetime="@@datatime">@@time</time>
+  </article>
+}
+
 @@if (article === 'article-pers') {
 <article class="article-pers @@dopClass">
   <img class="article-pers__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
