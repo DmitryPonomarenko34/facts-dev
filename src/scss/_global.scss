@@ -877,3 +877,35 @@ p {
     pointer-events: none;
   }
 }
+
+.sale-two {
+
+  &__container {
+    padding: 24px 15px;
+    background-color: var(--bg-color);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, #050A14, #050A14);
+    max-width: 966px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &:first-child {
+      display: flex;
+      align-items: center;
+      margin-right: 272px;
+    }
+
+    &:last-child {
+      margin-right: 75px;
+    }
+  }
+
+  &__img {
+    display: block;
+  }
+}
