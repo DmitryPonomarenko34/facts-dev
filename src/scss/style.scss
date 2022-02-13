@@ -557,4 +557,25 @@
   }
 }
 
+.publication {
+  padding: 64px 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 23.333%;
+    max-width: none;
+    max-height: none;
+    margin-right: 2.2%;
+    margin-bottom: 31px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
 @import "media";
