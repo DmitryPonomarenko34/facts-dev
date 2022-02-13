@@ -439,4 +439,33 @@
   }
 }
 
+.beautiful {
+  padding: 47px 0 20px;
+  background-color: var(--second-color);
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 23.4%;
+    max-width: none;
+    min-height: 0;
+    margin-right: 2.1%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &.article-long {
+      padding: 20px 9px 20px 19px;
+    }
+  }
+}
+
 @import "media";
