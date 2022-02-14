@@ -23,7 +23,7 @@ export function global() {
     })
   }
 
-  let header = document.querySelector('.header');
+  let header = document.querySelector('.js-header');
   let headerHeight = header.clientHeight;
   let menuBox = document.querySelector('.js-menubox');
 

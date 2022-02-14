@@ -14,22 +14,28 @@
     margin-bottom: 25px;
   }
 
+  &__thumb-wrapper {
+    box-sizing: border-box;
+  }
+
   &__thumb-slide {
     position: relative;
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 60px;
+    padding: 10px 15px;
     text-align: center;
+    cursor: default;
 
     &::before {
       position: absolute;
       bottom: 0;
       left: 0;
+      z-index: 2;
       width: 0;
       height: 2px;
       background-color: var(--accent-color);
-      z-index: 2;
       content: "";
     }
 
@@ -73,72 +79,53 @@
     }
   }
 
-  &__for-swiper {}
-
   &__for-slide {
+    position: relative;
     box-sizing: border-box;
     width: 100%;
     padding: 24px 15px 153px;
-    position: relative;
     overflow-x: hidden;
-  }
-
-  &__for-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      left: 0;
-      top: 0;
-      width: 74%;
-      height: 100%;
-      background: linear-gradient(76.81deg, #000 14.51%, rgba(0, 0, 0, 0%) 74.23%);
-    }
   }
 
   &__for-img {
     position: absolute;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    z-index: -1;
     object-fit: cover;
     object-position: 0 20%;
   }
 
   &__for-category {
-    margin-bottom: 17px;
     position: relative;
     z-index: 2;
+    margin-bottom: 17px;
   }
 
   &__for-title {
     position: relative;
     z-index: 2;
-    margin-bottom: 30px;
     max-width: 608px;
+    margin-bottom: 30px;
     color: var(--second-color);
     font-size: 36px;
     line-height: 40px;
+    pointer-events: none;
 
+    @extend %trs-color;
     @extend %cerapro-bold;
   }
 
   &__for-text {
     position: relative;
     z-index: 2;
-    font-size: 20px;
     max-width: 540px;
+    color: var(--second-color);
+    font-size: 20px;
     line-height: 24px;
     opacity: 1;
-    color: var(--second-color);
+    pointer-events: none;
   }
 
   .swiper-slide-thumb-active {
@@ -158,26 +145,36 @@
       animation: animbefore 5s ease;
     }
   }
+
+  &__for-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 74%;
+      height: 100%;
+      background: linear-gradient(76.81deg, #000 14.51%, rgba(0, 0, 0, 0%) 74.23%);
+      content: "";
+    }
+
+    &:hover {
+      ~.gallery__for-title {
+        @extend %text-hover;
+      }
+    }
+  }
 }
 
 .articles {
-  padding: 24px 0 15px;
-
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   &__item {
-    width: 23.333%;
-    max-width: none;
-    margin-right: 27px;
-    margin-bottom: 30px;
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
-
     .article-primary__link {
       font-size: 22px;
     }
@@ -191,7 +188,8 @@
     justify-content: space-between;
     min-height: 302px;
     padding: 12px 18px;
-    background-image: url('@img/info/bg-1.jpg');
+    background-image: url("@img/info/bg-1.jpg");
+
     @extend %bg;
 
     &::before {
@@ -205,15 +203,17 @@
     }
   }
 
-  &__text {}
+  &__text {
+    margin-right: 50px;
+  }
 
   &__title {
+    position: relative;
+    z-index: 1;
     max-width: 450px;
     margin: 7% 0 16.7%;
     color: var(--second-color);
     line-height: 48px;
-    z-index: 1;
-    position: relative;
   }
 
   &__link {
@@ -223,11 +223,17 @@
     line-height: 14px;
     text-transform: uppercase;
     opacity: 0.5;
+    transition: ease 0.3s opacity, ease 0.3s color;
+
+    &:hover {
+      opacity: 1;
+      transition: ease 0.3s opacity;
+
+      @extend %text-hover;
+    }
 
     @extend %cerapro-medium;
   }
-
-  &__box {}
 
   &__list {
     position: relative;
@@ -250,10 +256,10 @@
           top: 0;
           right: 0;
           left: 0;
-          background-color: var(--accent-color);
-          opacity: 1;
-          border-radius: 0;
           color: rgba(255, 255, 255, 0.8);
+          background-color: var(--accent-color);
+          border-radius: 0;
+          opacity: 1;
         }
       }
     }
@@ -277,34 +283,22 @@
     color: var(--second-color);
     font-size: 20px;
     line-height: 27px;
+
     @extend %cerapro-medium;
+    @extend %trs-color;
 
     &::before {
-      content: '';
       position: absolute;
       top: 0;
       left: 0;
-      height: 1px;
       width: 50px;
+      height: 1px;
       background-color: rgba(var(--second-rgba), 0.5);
+      content: "";
     }
-  }
 
-  &__list-time {}
-}
-
-.news {
-  padding: 54px 0 20px;
-
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 36px 25px;
-  }
-
-  &__item {
-    &:nth-child(1) {
-      grid-column-start: span 2;
+    &:hover {
+      @extend %text-hover;
     }
   }
 }
@@ -331,6 +325,12 @@
       color: var(--default-color);
       font-size: 55px;
       background-color: var(--second-color);
+
+      @extend %trs-color;
+
+      &:hover {
+        @extend %text-hover;
+      }
     }
 
     .swiper-button-next {
@@ -376,20 +376,12 @@
   }
 
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 26px;
-  }
-
-  &__item {
-    &--fluid {
-      grid-column-start: span 2;
-    }
   }
 }
 
 .popular {
-  padding: 48px 0 52px;
+  padding: 44px 0 52px;
   background-color: var(--bg-color);
 
   &__title {
@@ -412,6 +404,11 @@
       color: var(--default-color);
       font-size: 55px;
       background-color: var(--second-color);
+      @extend %trs-color;
+
+      &:hover {
+        @extend %text-hover;
+      }
     }
 
     .swiper-button-next {
@@ -440,16 +437,11 @@
 }
 
 .beautiful {
-  padding: 47px 0 51px;
+  padding: 47px 0 21px;
   background-color: var(--second-color);
 
   &__title {
     margin-bottom: 35px;
-  }
-
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   &__item {
@@ -476,20 +468,28 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-      top: 57%;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      margin-top: 31px;
       color: var(--second-color);
+      @extend %trs-color;
 
       &::after {
         font-size: 50px;
       }
+
+      &:hover {
+        @extend %text-hover;
+      }
     }
 
     .swiper-button-next {
-      right: 36px;
+      right: 0;
     }
 
     .swiper-button-prev {
-      left: 36px;
+      left: 0;
     }
   }
 
@@ -512,7 +512,7 @@
 
   &__link {
     &::before {
-      content: '';
+      content: "";
       z-index: 1;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
     }

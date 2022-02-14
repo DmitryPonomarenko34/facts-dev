@@ -1,11 +1,13 @@
 @@if (article === 'article') {
 <article class="article @@dopClass">
-  <a class="article__box" href="@@href">
-    <img class="article__box-img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
-    <span class="article__box-info info-black">
+  <div class="article__box">
+    <a class="article__link" href="@@href">
+      <img class="article__box-img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
+    </a>
+    <a class="article__box-info info-black" href="@@infoLink">
       @@info-text
-    </span>
-  </a>
+    </a>
+  </div>
   <a class="article__text-link article-text" href="#">
     @@link-text
   </a>
@@ -17,11 +19,11 @@
 <article class="article-long @@dopClass">
   <img class="article-long__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
   <div class="article-long__box">
-    <span class="article-long__info info-text">
+    <a class="article-long__info info-text" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
-  <span class="article-long__num">
+  <span class="article-long__num article-num">
     @@nums
   </span>
   <a class="article-long__link article-text" href="@@href">
@@ -34,9 +36,9 @@
 <article class="article-primary @@dopClass">
   <img class="article-primary__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
   <div class="article-primary__box">
-    <span class="article-primary__info info-text">
+    <a class="article-primary__info info-text" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-primary__link article-text" href="@@href">
     @@text
@@ -48,9 +50,9 @@
 @@if (article === 'article-primary--white') {
 <article class="article-primary article-primary--white @@dopClass">
   <div class="article-primary__box">
-    <span class="article-primary__info info-black">
+    <a class="article-primary__info info-black" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-primary__link article-text" href="@@href">
     @@text
@@ -62,9 +64,9 @@
 @@if (article === 'article-primary--black') {
 <article class="article-primary article-primary--black @@dopClass">
   <div class="article-primary__box">
-    <span class="article-primary__info info-text">
+    <a class="article-primary__info info-text" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-primary__link article-text" href="@@href">
     @@text
@@ -98,9 +100,9 @@
 @@if (article === 'article-quotes') {
 <article class="article-quotes @@dopClass">
   <a class="article-quotes__link" href="@@href"></a>
-  <span class="article-quotes__cap info-black">
+  <a class="article-quotes__cap info-black" href="@@infoLink">
     @@info-text
-  </span>
+  </a>
   <blockquote class="article-quotes__text">
     @@quotes-text
   </blockquote>
@@ -118,9 +120,9 @@
 @@if (article === 'article-text') {
 <article class="article-caption @@dopClass">
   <div class="article-caption__box">
-    <span class="article-caption__cap info-black">
+    <a class="article-caption__cap info-black" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-caption__link article-title" href="@@titleHref">
     @@titleText
@@ -135,9 +137,9 @@
 @@if (article === 'article-rating') {
 <article class="article-rating @@dopClass">
   <div class="article-rating__box">
-    <span class="article-rating__cap info-black">
+    <a class="article-rating__cap info-black" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-rating__link" href="@@href">
     <img class="article-rating__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
@@ -157,9 +159,9 @@
 @@if (article === 'article-white') {
 <article class="article-white @@dopClass">
   <div class="article-white__box">
-    <span class="article-white__cap info-text">
+    <a class="article-white__cap info-text" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <div class="article-white__imgbox">
     <img class="article-white__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">
@@ -174,9 +176,9 @@
 @@if (article === 'article-black') {
 <article class="article-black @@dopClass">
   <div class="article-black__box">
-    <span class="article-black__cap info-black">
+    <a class="article-black__cap info-black" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-black__link" href="@@href"></a>
   <span class="article-black__num article-num">
@@ -191,9 +193,9 @@
 @@if (article === 'article-photo') {
 <article class="article-photo @@dopClass">
   <div class="article-photo__box">
-    <span class="article-photo__cap info-text">
+    <a class="article-photo__cap info-text" href="@@infoLink">
       @@info-text
-    </span>
+    </a>
   </div>
   <a class="article-photo__link" href="@@href">
     <img class="article-photo__img" src="@@imgSrc" alt="@@alt" width="@@imgWidth" height="@@imgHeight">

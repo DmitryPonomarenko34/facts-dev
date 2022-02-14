@@ -9,6 +9,27 @@ window.onload = function () {
     simulateTouch: true,
     spaceBetween: 25,
     slidesPerView: 4,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1.4,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      // when window width is >= 640px
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+      }
+    }
   });
 
   const swiper2 = new Swiper(".gallery__for-swiper", {
@@ -43,6 +64,26 @@ window.onload = function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+    breakpoints: {
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1.2,
+      },
+      // when window width is >= 480px
+      480: {
+        spaceBetween: 10,
+        slidesPerView: 1.5,
+      },
+      630: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      840: {
+        spaceBetween: 24,
+        slidesPerView: 3,
+      },
+    }
   });
 
   const popularSwiper = new Swiper(".popular__swiper", {
@@ -57,9 +98,36 @@ window.onload = function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+    breakpoints: {
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1.2,
+      },
+      // when window width is >= 480px
+      480: {
+        spaceBetween: 10,
+        slidesPerView: 1.5,
+      },
+      630: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      840: {
+        spaceBetween: 24,
+        slidesPerView: 3,
+      },
+
+      1200: {
+        spaceBetween: 24,
+        slidesPerView: 4,
+      }
+    }
+
+
   });
 
-   const sliderSec = new Swiper(".slider-sec__swiper", {
+  const sliderSec = new Swiper(".slider-sec__swiper", {
     simulateTouch: true,
     slidesPerView: 1,
     autoHeight: true,
@@ -68,5 +136,24 @@ window.onload = function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+
+    breakpoints: {
+      320: {
+        spaceBetween: 10,
+        slidesPerView: 1.1,
+        autoHeight: false,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+        autoHeight: false,
+      },
+      630: {
+        slidesPerView: 1,
+        autoHeight: true,
+      },
+    }
   });
 }

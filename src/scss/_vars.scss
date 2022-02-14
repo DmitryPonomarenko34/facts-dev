@@ -7,6 +7,24 @@
   --bg-color: #f4f4f4;
 }
 
+%trs-color {
+  transition: ease 0.3s color;
+}
+
+%text-hover {
+  color: var(--accent-color);
+  transition: ease 0.3s color;
+}
+
+%trs-fill {
+  transition: ease 0.3s fill;
+}
+
+%icon-hover {
+  fill: var(--accent-color);
+  transition: ease 0.3s fill;
+}
+
 %cerapro-regular {
   font-weight: 400;
   font-family: "CeraPro-Regular", sans-serif;
