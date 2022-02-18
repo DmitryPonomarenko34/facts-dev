@@ -1,5 +1,5 @@
 import fileinclude from "gulp-file-include";
-import webphtmlNosvg from 'gulp-webp-html-nosvg';
+// import webphtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 
 export const html = () => {
@@ -15,7 +15,6 @@ export const html = () => {
       basepath: '@file'
     }))
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
-    .pipe(webphtmlNosvg())
     .pipe(versionNumber({
       'value' : '%DT%',
       'append': {

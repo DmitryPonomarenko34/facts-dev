@@ -21,10 +21,6 @@ export const scss = () => {
       outputStyle: 'expanded',
     }))
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
-    .pipe(webpcss({
-      webpClass: ".webp",
-      noWebpClass: ".no-webp",
-    }))
     .pipe(autoprefixer({
       grid: true,
       overrideBrowserslist: ["last 3 version"],

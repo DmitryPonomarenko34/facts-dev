@@ -91,7 +91,7 @@
 
 .menu {
   &__box {
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 90vh;
     transform: translateY(-100%);

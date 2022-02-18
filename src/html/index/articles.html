@@ -1,5 +1,8 @@
-<div class="articles o-block">
+<section class="articles o-block">
   <div class="container">
+    <h2 class="articles__title title">
+      Статьи
+    </h2>
     <div class="articles__inner o-block__inner">
       @@include('../_all-components.html', {
         'article': 'article',
@@ -112,6 +115,20 @@
         'datatime': '2021-09-13',
         'time': '15:44',
       })
+      @@include('../_all-components.html', {
+        'article': 'article',
+        'dopClass': 'o-block__item',
+        'href': '#',
+        'infoLink': '#',
+        'imgSrc': '@img/articles/05.jpg',
+        'imgWidth': '301',
+        'imgHeight': '148',
+        'alt': 'политика',
+        'info-text': 'Политика',
+        'link-text': 'Кабмин назначил главой МОН Сергея Шкарлета в обход Рады',
+        'datatime': '2021-09-13',
+        'time': '15:44',
+      })
     </div>
   </div>
-</div>
+</section>

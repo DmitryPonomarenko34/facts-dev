@@ -24,7 +24,7 @@
   .rating,
   .o-grid,
   .popular,
-  .o-block, {
+  .o-block {
     padding: 20px 0;
 
     &__title,
@@ -46,6 +46,7 @@
 }
 
 @include laptop {
+
   .site-container {
     &--lock {
       &::before {
@@ -121,24 +122,6 @@
     &__img {
       max-width: 51%;
       height: auto;
-    }
-  }
-
-  .o-block {
-    &__inner {}
-
-    &__item {
-      width: 32.333%;
-      margin-right: 1.5%;
-      min-height: 0;
-
-      &:nth-child(4n) {
-        margin-right: 1.5%;
-      }
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
     }
   }
 
@@ -219,18 +202,41 @@
       font-size: 20px;
     }
   }
+
+
+  .o-block {
+    &__inner {}
+
+    &__item {
+      width: 32.333%;
+      margin-right: 1.5%;
+      min-height: 0;
+
+      &:nth-child(4n) {
+        margin-right: 1.5%;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 @include tablet-L {
   .search-popup {
     &__input {
-      width: 90%;
-      height: 80px;
-      font-size: 20px;
+      padding: 27px 45px 27px 15px;
+      font-size: 18px;
 
       &::placeholder {
-        font-size: 20px;
+        font-size: 18px;
       }
+    }
+
+    &__btn {
+      width: 45px;
+      margin-left: -45px;
     }
   }
 
@@ -380,6 +386,19 @@
 }
 
 @include portrait-phones {
+  .container {
+    max-width: 320px;
+  }
+
+  .popular__container,
+  .rating__container,
+  .popular__inner,
+  .slider-sec__container,
+  .footer__container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
   .header {
     &__logo-img {
       width: 100px;
@@ -390,6 +409,10 @@
     &__box {
       left: 0;
       width: 100%;
+    }
+
+    &__list {
+      min-width: 0;
     }
   }
 
@@ -417,12 +440,6 @@
     &__for-title {
       font-size: 26px;
       line-height: 30px;
-    }
-  }
-
-  .article {
-    &__box-img {
-      max-height: 160px;
     }
   }
 
@@ -463,6 +480,11 @@
     &::before {
       display: none;
     }
+  }
+
+  .article-photo {
+    min-height: 255px;
+    padding-bottom: 30px;
   }
 }
 

@@ -40,6 +40,19 @@
   &__list-link {
     display: block;
     width: 100%;
+    @extend %trs-color;
+
+    &:hover {
+      @extend %text-hover;
+    }
+  }
+
+  &__content-link {
+    @extend %trs-color;
+
+    &:hover {
+      @extend %text-hover;
+    }
   }
 
   &__content-info {
@@ -103,5 +116,10 @@
     color: var(--default-color);
 
     @extend %cerapro-medium;
+    @extend %trs-color;
+
+    &:hover {
+      @extend %text-hover;
+    }
   }
 }
